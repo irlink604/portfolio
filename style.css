@@ -1,17 +1,55 @@
 html,
 body {
-    background-color: #F5EDE0
+
+    background-color: #F5EDE0;
+    margin: 0;
+    padding: 0;
 }
 
+/* JE VAIS NUMEROTER LE MEME NOMBRE POUR LE MEME GROUPE  */
 
-
+/* 1 NAV PARTIE */
 nav {
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(169, 100, 16);
+    background-color: #dda56ce8;
+    padding: 0;
+    border-bottom: 4px solid;
+    position: fixed;
+    width: 100vw;
+    z-index: 5;
+    width: 100%;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.logo {
+
+    border-radius: 60%;
+    border: solid 5px;
+    height: 48px;
+    animation: bounce 1.5s ease-in-out infinite;
 
 }
+
+/* Applique l’animation au logo */
+
+
+
+
+
 
 
 
@@ -19,37 +57,34 @@ nav ul {
     display: flex;
     gap: 24px;
     list-style: none;
-
-
 }
 
+/* BALISE A POUR LES LIENS*/
 
 a {
-    display: flex;
     color: black;
     text-decoration: none;
     transition: 1s;
+
 }
 
 
 a:hover {
-
-    color: #ff6a00;
+    color: rgb(218 15 15);
     text-decoration: underline;
     transition: all 0.3s ease;
-
-
-
-
 }
 
 
+
+
+/*2 HEADER  */
 header {
     display: flex;
     justify-content: space-between;
-
-
-
+    padding: 2%;
+    background-color: #dda56ce8;
+    padding: 2%;
 }
 
 
@@ -79,47 +114,91 @@ header a {
 
 }
 
+/* 3 MAIN DE LA PAGE */
 main {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    animation: slideIn 1s ease forwards;
 }
 
 main h2 {
     text-align: center;
     margin-top: 70px;
 
+
+}
+
+/*3 ANIMATION SLIDEIN DANS LE MAIN */
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
-#competence {
+
+
+
+/* 4 CONCEPTION DE LA PAGE */
+
+#conception {
+
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+
 
 }
 
+#conception p {
+    width: 87%;
 
+}
 
+#conception img {
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    transition: 0.3s;
+
+}
+
+#conception img:hover {
+
+    transform: translateY(-5px) scale(1.05);
+    background: rgb(255 38 38 / 16%);
+    box-shadow: 0 0 10px rgb(237, 156, 3);
+
+}
+
+/*4 DESIGN DES SNEAKER DANS CONCEPTION  */
 .design-sneaker {
+
     width: 25%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: #080400 solid 2px;
+
 }
 
 .design-sneaker a {
-    color: #9c5b00;
 
+    color: rgb(218 15 15);
 
 }
 
 
-.design-sneaker img {
-    transition: transform 0.3s ease;
-}
-
-.design-sneaker img:hover {
-    transform: scale(1.05) translateY(-5px);
-}
 
 
-
+/*5 SECTION MES QUALITE*/
 
 #qualités-container {
     display: flex;
@@ -149,6 +228,9 @@ main h2 {
 }
 
 
+
+/* AVIS CONTAINER */
+
 .avis-container {
     display: flex;
     flex-direction: column;
@@ -156,68 +238,62 @@ main h2 {
 
 
 .avis-container img {
+
     height: 40px;
     border: 2px solid black;
     border-radius: 60px;
-
-
-}
-
-
-.avis-container img {
     transition: transform 0.3s ease;
+
 }
+
 
 .avis-container img:hover {
+
     transform: scale(1.2) rotate(5deg);
+
 }
 
 
 .top {
+
     display: flex;
 
-
 }
+
 
 .top h4 {
+
     display: flex;
     width: 100%;
-
-
-}
-
-.notation-left img {
-    height: 10px;
-
 
 }
 
 .bottom {
+
     display: flex;
     gap: 16px;
 
+}
+
+
+.notation-left img {
+
+    height: 10px;
 
 }
+
+/* 6 SECTION PARCOURS  */
 
 #parcours-container {
+
     display: flex;
-
-
 
 }
 
 
-.parcours-container {
-    display: flex;
-    flex-direction: column;
-    border-radius: 5%;
-    width: 25%;
-    border: 3px solid black;
-    background-color: rgb(146 86 86 / 40%);
-
-}
 
 .parcours-container {
+
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 15px;
@@ -225,18 +301,77 @@ main h2 {
     backdrop-filter: blur(8px);
     padding: 20px;
     transition: 0.3s;
+
 }
 
+
 .parcours-container:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.2);
+
+    transform: translateY(-5px) scale(1.02);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.4);
+
 }
 
 
 .parcours-text-container {
+
     display: flex;
     justify-content: space-between;
     flex-direction: row;
 
+}
 
+/* Effet animation sur la page  */
+
+section {
+
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s ease forwards;
+
+}
+
+section:nth-of-type(2) {
+
+    animation-delay: 0.2s;
+
+}
+
+section:nth-of-type(3) {
+
+    animation-delay: 0.10s;
+
+}
+
+section:nth-of-type(4) {
+
+    animation-delay: 0.14s;
+
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*7 FOOTER */
+
+footer {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+footer img {
+  height: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+footer img:hover {
+  transform: scale(1.2);
 }
